@@ -1,76 +1,52 @@
-<section class="jumbotron text-center" style="background: url('/Public/AppFront/app_default_template/img/bg1.jpg'); background-size:cover; background-position:center;">
-
-    <div class="wblock1 text-left p-4 top_block1 container">
-
-        <div class="row">
-            <div class="col-md-6">
-                <h1 class="jumbotron-heading"><?=$t->get('your_best_offer');?></h1>
-                <p class="lead">
-                    <?=$t->get('sale_info');?>
-                </p>
-                <p>
-                    <a href="#" class="btn btn-lg btn-success my-2" data-toggle="modal" data-target="#order_modal">&nbsp;&nbsp;&nbsp;<?=$t->get('order_now_btn');?>&nbsp;&nbsp;&nbsp;</a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="<?=$lang_link_prefix?>/auth/login?reg=1" class="btn btn-lg btn-primary my-2">&nbsp;<?=$t->get('sign_up');?>&nbsp;&gt;&gt;&nbsp;</a>
-
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img src="/Public/AppFront/app_default_template/img/sale1.jpg" alt="Discount" width="100%" class="wblock1 mt-2">
-            </div>
-        </div>
-
-
-    </div>
-
+<section class="jumbotron text-center">
+    <div class="shaped" style="background:url(../Public/AppFront/app_default_template/img/knuca.jpg);">
+	<!--<video class="video" loop="loop" autoplay="" muted="">
+      <source src="/Public/AppFront/app_default_template/img/knuca.mp4" type="video/mp4" />
+    </video>-->
+	</div>
+	<div class="content_s">
+		<div class="offer">
+			<p class="lead1"><i class="fas fa-quote-left"></i><?=$t->get('motto');?><i class="fas fa-quote-right"></i></p>
+			<p class="lead"><?=$t->get('join_text');?></p>
+			<a href="#" class="btn btn-lg btn-success my-2" data-toggle="modal" data-target="#order_modal"><?=$t->get('join_btn');?></a>
+		</div>
+	</div>
+	
 </section>
 <div class="top-shadow">&nbsp;</div>
 
 <!-- Begin page content -->
-<main role="main" class="container">
+<main role="main" class="container" >
 
     <div class="blocks-list row">
-        <div class="col-md-4">
+        <div class="col-md-4" >
             <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="/Public/AppFront/app_default_template/img/app2.png" src="/Public/AppFront/app_default_template/img/app2.png" alt="Card image cap">
+                <img class="card-img-top" data-src="/Public/AppFront/app_default_template/img/1.jpg" src="/Public/AppFront/app_default_template/img/1.jpg" alt="Card image cap">
                 <div class="top-shadow">&nbsp;</div>
-                <div class="card-body">
-                    <h3>App development</h3>
-                    <ul>
-                        <li>Product Plan - from 200$</li>
-                        <li>Wireframes - from 500$</li>
-                        <li>Graphics Design - from 1000$</li>
-                    </ul>
-                </div>
+                <div class="card-body" style="background-image:url(../Public/AppFront/app_default_template/img/1.svg); background-size:cover;" >
+                    <?=$t->get('campus');?>
+                </div><a href="#" class="btn btn-lg btn-info my-2" data-toggle="modal" data-target="#order_modal" style="margin:0!important;"><?=$t->get('more_info');?></a>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="/Public/AppFront/app_default_template/img/website2.png" src="/Public/AppFront/app_default_template/img/website2.png" alt="Card image cap">
+                <img class="card-img-top" data-src="/Public/AppFront/app_default_template/img/2.jpeg" src="/Public/AppFront/app_default_template/img/2.jpeg" alt="Card image cap">
                 <div class="top-shadow">&nbsp;</div>
-                <div class="card-body">
-                    <h3>Web-site</h3>
-                    <ul>
-                        <li>Product Plan - from 40$</li>
-                        <li>Wireframes - from 100$</li>
-                        <li>Graphics Design - from 200$</li>
-                    </ul>
+                <div class="card-body" style="background-image:url(../Public/AppFront/app_default_template/img/2.svg); background-size:cover;" >
+                    <?=$t->get('international');?>
+                </div>
+				<a href="#" class="btn btn-lg btn-success my-2" data-toggle="modal" data-target="#order_modal" style="margin:0!important;"><?=$t->get('more_info');?></a>
 
-                </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="/Public/AppFront/app_default_template/img/startup2.png" src="/Public/AppFront/app_default_template/img/startup2.png" alt="Card image cap">
+                <img class="card-img-top" data-src="/Public/AppFront/app_default_template/img/3.jpg" src="/Public/AppFront/app_default_template/img/3.jpg" alt="Card image cap">
                 <div class="top-shadow">&nbsp;</div>
-                <div class="card-body">
-                    <h3>Custom Web-service / Startup</h3>
-                    <ul>
-                        <li>Product Plan - from 200$</li>
-                        <li>Wireframes - from 500$</li>
-                        <li>Graphics Design - from 1000$</li>
-                    </ul>
+                <div class="card-body" style="background-image:url(../Public/AppFront/app_default_template/img/1.svg); background-position: right bottom; background-repeat: no-repeat;" >
+                    <?=$t->get('science');?>
                 </div>
+				<a href="#" class="btn btn-lg btn-primary my-2" data-toggle="modal" data-target="#order_modal" style="margin:0!important;"><?=$t->get('more_info');?></a>
             </div>
         </div>
 
@@ -78,13 +54,65 @@
 
     </div>
 </main>
-
-
-<div class="info_bottom mt-4 pb-4">
-    <div class="container">
-        <?=$t->get('seo_text_bottom');?>
-    </div>
+<div class="info_bottom mt-4">
+		<div class="container text-justify">
+			<?=$t->get('un_text_1');?>
+		</div>
 </div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img class="d-block w-100 h-100" src="../Public/AppFront/app_default_template/img/11.jpg">
+			<div class="carousel-caption d-none d-md-block">
+				<h2><?=$t->get('un_name_l');?></h2>
+				<h3><?=$t->get('sl1');?></h3>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="../Public/AppFront/app_default_template/img/12.jpg">
+			<div class="carousel-caption d-none d-md-block">
+				<h2><?=$t->get('un_name_l');?></h2>
+				<h3><?=$t->get('sl2');?></h3>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="../Public/AppFront/app_default_template/img/13.jpg">
+			<div class="carousel-caption d-none d-md-block">
+				<h2><?=$t->get('un_name_l');?></h2>
+				<h3><?=$t->get('sl3');?></h3>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="../Public/AppFront/app_default_template/img/14.jpg">
+			<div class="carousel-caption d-none d-md-block">
+				<h2><?=$t->get('un_name_l');?></h2>
+				<h3><?=$t->get('sl4');?></h3>
+			</div>
+		</div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+<div class="info_bottom mt-4 pb-4">
+		<div class="container text-justify">
+			 <?=$t->get('un_text_2');?>
+		</div>
+</div>
+
+
 
 <div class="modal fade bd-example-modal-lg modal_request" id="order_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">

@@ -471,7 +471,7 @@ Class AuthSystem {
         if (isset($res[0])) return $res[0];
         else return false;
     }
-
+	
     public function make_email_enter_token($user_id) // Experimental Method [TO DO]
     {
 

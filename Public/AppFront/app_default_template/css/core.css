@@ -1,6 +1,21 @@
+/* //i--- skrollbar ; inside_template ; charleeme ; 22.06.2020 ; CSS1 ---/ */
+::-webkit-scrollbar{
+    width:12px;
+	background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-radius:6px;
+    background-color: #dcba94;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #aaa;
+}
+::-webkit-scrollbar-track{
+    border-width:0;
+}
 
 /* //i--- Sticky footer styles ; inside_template ; torrison ; 01.05.2020 ; CSS1 ---/ */
-
 html {
     position: relative;
     min-height: 100%;
@@ -17,14 +32,14 @@ body {
     /* Set the fixed height of the footer here */
     height: 70px;
     padding-top: 0 !important;
-    background-color: #eee;
+    background-color: #1f4752;
 }
 
 /* //i---Medium devices (tablets, 768px and up) has smaller footer or footer hide ; inside_template ; torrison ; 01.05.2020 ; CSS2 ---/ */
 @media (max-width: 768px) {
 
     .footer {
-        height: 70px;
+        height: 90px;
     }
     .footer .col-6 {
         display:none;
@@ -44,20 +59,40 @@ body {
 /* //i--- TOP line CSS ; inside_template ; torrison ; 01.05.2020 ; CSS4 ---/ */
 /* -------------------------------------------------- */
 .top_line {
-    background: #eee;
+   // background: #eee;
 }
 .top_line .right_block {
-    padding: 5px;
+    padding:5px 15px;
 }
 .top_line .left_block {
     font-size: 22px !important;
     padding-top: 3px;
-    padding-left: 16px;
+    padding-left: 15px;
 }
-
+.navbar-nav .nav-item .nav-link{
+	color: #fff;!important;
+}
+.active > a{
+	color: #0b1215;
+}
 .top_line .left_block > a {
     padding-right: 8px;
-    color: #555;
+    color: #fff;
+}
+.top_line .left_block > a:hover {
+    color: rgba(0,0,0,.7);
+}
+.un_name_l{
+	display:none;
+}
+.un_name_b{
+	display:inline-block;
+	margin-left: 10px;
+	display:inline-block;
+	vertical-align:middle;
+	width:300px;
+	white-space: normal;
+	color:#fff;
 }
 
 /* //i--- TOP Navbar CSS ; inside_template ; torrison ; 01.05.2020 ; CSS5 ---/ */
@@ -90,8 +125,52 @@ code {
 
 /* -------   MAIN Block -------- */
 .jumbotron {
-    margin-bottom: 0;
+    margin: 0;
+	padding:0;
 }
+/* //i--- main ; inside_template ; charleeme ; 22.06.2020 ; CSS1 ---/ */
+.shaped{
+	height:27rem;
+	width:60vw;
+	float:right;
+	shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+	shape-margin: 20px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+	display:block;
+}   
+.content_s{
+	height:27rem;
+	display:block;
+	background:
+	linear-gradient(135deg, #eccba7 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+	linear-gradient(225deg, #eccba7 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+	background-color:#eccba7;
+	background-size: 64px 128px;
+} 
+.lead1{
+	font-size: 2.3rem;
+    font-weight: 600;
+	text-transform:uppercase;
+	color:#1f4752;
+} 
+.shaped::after{
+	content: "";
+	height:27rem;
+	width:60vw;
+	left:0vw;
+	clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+	background:rgba(236,203,167,0.6);
+	position: absolute;
+}  
+.offer{
+	height:27rem; 
+	width:35vw; 
+	display:inline-block;
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	justify-content: center;padding-left:3vw;
+} 
 
 /* -------   3 blocks -------- */
 /* Medium devices (tablets, 768px and up) */
@@ -104,10 +183,7 @@ code {
     .blocks-list .card-body > ul {
         -webkit-padding-start: 10px;
     }
-
-
 }
-
 
 /* -------   3 circles OR Why we? -------- */
 .marketing .row > div {
@@ -116,7 +192,6 @@ code {
 .marketing {
     padding-top: 15px;
 }
-
 .marketing .why_we_list {
     font-size: 20px;
 }
@@ -127,11 +202,21 @@ code {
     .marketing .why_we {
         margin-top: 30px;
     }
-
     .marketing .why_we_list {
         font-size: 16px;
     }
-
+	.shaped{
+	height:21rem;
+	}   
+	.content_s{
+		height:21rem;
+	} 
+	.shaped::after{
+		height:21rem;
+	}  
+	.offer{
+		height:21rem; 
+	} 
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -144,7 +229,31 @@ code {
     .marketing .why_we_list {
         font-size: 16px;
     }
-
+	.content_s{
+		height:30rem;
+	} 
+	.shaped{
+		display:none;
+	}   
+	.offer{
+		height:30rem; 
+		width:100vw;
+	}
+	.un_name_l{
+		width:100px;
+		white-space: normal;
+		display:inline-block;
+		color:#fff;
+		margin-left: 10px;
+		line-height: 70px;
+		font-size:1.5rem;
+	}
+	.un_name_b{
+		display:none;
+	}
+	#carouselExampleIndicators{
+		display:none;
+	}
 }
 
 
@@ -160,32 +269,38 @@ code {
 @media (max-width: 768px) and (min-width: 576px) {
 
     .price_cards .btn {
-
         font-size: 15px;
-
     }
-
 }
 
 
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  }
+@media (min-width: 576px) {
+}
+
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { 
+ }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {  }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) { 
+
+ }
 
 /* //i--- Bootstrap color ballance and fixes ; inside_template ; torrison ; 01.05.2020 ; CSS7 ---/ */
 a {
-    color: #0074D9;
+	color: #fff;
     cursor: pointer;
+}
+a:hover{
+	color: rgba(0,0,0,.7);
+	text-decoration:none;
 }
 .btn-primary
 {
@@ -293,8 +408,10 @@ a {
 /* --------- LANG DropDown ------------ */
 #lang_dropdown {
     outline:0 !important;
-    background: #eee !important;
+    //background: #eee !important;
+	background: #fff !important;
     border: 0;
+	border-radius:5px;
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -332,7 +449,6 @@ a {
     .top_line .left_block {
         display: none !important;
     }
-
     .top_line .icons_mob {
         display: inline-block !important;
         float: left;
@@ -340,11 +456,13 @@ a {
         padding-left: 5px;
         margin-top: -3px;
     }
-
     .top_line .icons_mob > a {
-        color: #555;
+        color: #fff;
         padding-right: 8px;
     }
+	.top_line .icons_mob > a:hover {
+		color: rgba(0,0,0,.7);
+	}
 }
 
 /* Product Image Block */

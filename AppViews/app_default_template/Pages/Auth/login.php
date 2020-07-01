@@ -65,11 +65,7 @@
 				<div class="col-md-12">
 					<a class="btn btn-danger" rel="nofollow" href="<?=$inside4_auth->google_login->social_login_link()?>">Google Login</a>
 				</div>
-                <!--
-				<div class="col-md-6">
-					<a class="btn btn-primary" rel="nofollow" id="fb_login_a" href="<?=$inside4_auth->fb_login->fb_login_link()?>"><i class="fab fa-facebook-square" aria-hidden="true"></i> &nbsp;Facebook login</a>
-				</div>
-				-->
+                
 			</div>
 		</div>
 	</div>

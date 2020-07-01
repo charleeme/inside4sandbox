@@ -81,7 +81,7 @@
 <header>
 
     <!-- //i--- Top-Line Header in Fixed navbar ; inside_template ; torrison ; 01.08.2018 ; 19 ---/ -->
-    <nav class="top_line">
+    <nav class="top_line text-white" style="background: #1f4752" >
         <div class="container">
             <div class="blocks-list row">
                 <div class="col-sm-8 col-md-6 text-left left_block">
@@ -110,9 +110,9 @@
                     </div>
 
                     <!-- //i--- Phone and Email ; inside_template ; torrison ; 01.08.2018 ; 11b ---/ -->
-                    <div class="phone d-inline-block">+38 093 155 29 70 | </div>
+                    <!--<div class="phone d-inline-block">+38 093 155 29 70 | </div>
 
-                    <div class="email d-inline-block">torrison1@gmail.com | </div>
+                    <div class="email d-inline-block">torrison1@gmail.com | </div> -->
 
                     <!-- //i--- Language Switch Select ; inside_template ; torrison ; 01.08.2018 ; 20 ---/ -->
                     <div class="dropdown" style="display: inline-block;">
@@ -153,14 +153,15 @@
     </nav>
     <!-- //i--- Menu Header ; inside_template ; torrison ; 01.08.2018 ; 10a ---/ -->
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-light top_navbar">
+    <nav class="navbar navbar-expand-md navbar-light top_navbar"  style="background: #4b7d8d;">
         <div class="container">
 
             <div class="navbar-left">
                 <a class="navbar-brand" href="<?=$lang_link_prefix?>/" style="position: relative;">
                     <!-- //i--- Name and Logo ; inside_template ; torrison ; 01.08.2018 ; 11c ---/ -->
-                    <img src="/Public/AppFront/app_default_template/img/logo_bot.svg" alt="" style="display: inline-block; top: -6px; left: -4px; height: 55px; position: absolute;">
-                    <span style="margin-left: 33px;">Inside 4</span></a>
+                    <img src="/Public/AppFront/app_default_template/img/gerb.gif" alt="" style="display: inline-block;  height: 70px; margin-left:5px;">
+                    <div class="un_name_b"><?=$t->get('un_name_b');?></div></a>
+					<div class="un_name_l"><?=$t->get('un_name_l');?></div></a>
             </div>
 
             <!-- //i--- Mobile friendly Menu ; inside_template ; torrison ; 01.08.2018 ; 11f ---/ -->
@@ -169,18 +170,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav">
-                    <li class="nav-item<?php if ($_SERVER['REQUEST_URI'] == '/') echo " active";?>">
+                    <li class="nav-item<?php if ($_SERVER['REQUEST_URI'] == '/' || '/ua' || '/ru') echo " active";?>">
                         <a class="nav-link" href="<?=$lang_link_prefix?>/"><?=$t->get('main_page');?></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/MobileApp"><?=$t->get('pwa_app');?></a>
+                    <li class="nav-item<?php if ($_SERVER['REQUEST_URI'] == '/info/feed"') echo " active";?>">
+                        <a class="nav-link" href="<?=$lang_link_prefix?>/info/feed"><?=$t->get('news');?></a>		
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/torrison1/inside4sandbox"><?=$t->get('GitHub');?></a>
-                    </li>
-                    <li class="nav-item<?php if ($_SERVER['REQUEST_URI'] == '/info/feed') echo " active";?>">
-                        <a class="nav-link" href="<?=$lang_link_prefix?>/info/feed"><?=$t->get('info');?></a>
-                    </li>
+                    <li class="dropdown nav-item<?php if ($_SERVER['REQUEST_URI'] == '//') echo " active";?>">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<?=$lang_link_prefix?>/"><?=$t->get('info');?></a>
+							<div class="dropdown-menu" style="background:#ADC0CE;">
+								<a class="dropdown-item" href="<?=$lang_link_prefix?>/info/feed"><?=$t->get('abit');?></a>		
+								<a class="dropdown-item" href="<?=$lang_link_prefix?>/info/feed"><?=$t->get('stud');?></a>		
+								<a class="dropdown-item" href="<?=$lang_link_prefix?>/info/feed"><?=$t->get('teach');?></a>		
+								<a class="dropdown-item" href="<?=$lang_link_prefix?>/info/feed"><?=$t->get('job');?></a>		
+							</div>
+					</li>
+					<li class="dropdown nav-item <?php if ($_SERVER['REQUEST_URI'] == '//') echo " active";?>">
+                        <a class="nav-link" href="<?=$lang_link_prefix?>//"><?=$t->get('stucture');?></a>
+						
+					</li>
                     <li class="nav-item<?php if ($_SERVER['REQUEST_URI'] == '/content/contacts') echo " active";?>">
                         <a class="nav-link" href="<?=$lang_link_prefix?>/content/contacts"><?=$t->get('contacts');?></a>
                     </li>
@@ -199,9 +207,9 @@
 <footer class="footer pt-4 pt-md-5 border-top">
     <div class="container mt-2">
         <div class="row">
-            <div class="col-12 col-md text-center">
+            <div class="col-12 col-md text-center text-white">
                 <!-- //i--- Footer Logo + Copy text ; inside_template ; torrison ; 01.08.2018 ; 23a ---/ -->
-                Inside 4 : Pure Code
+                <?=$t->get('un_name_b');?>
                 <small class="d-block mb-3 text-muted">
                     &copy; All right reserved
                     <a href="<?=$lang_link_prefix?>/main/privacy">Usage Agreement</a>

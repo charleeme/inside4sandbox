@@ -127,7 +127,7 @@ function api_call(url, method, callback_function, post_array = {}) {
 
     let inside4_session = encodeURIComponent(localStorage.getItem('inside4_session'));
 
-    let api_server_url = 'https://inside4sandbox.ikiev.biz';
+    let api_server_url = 'http://inside4sandbox.local';
 
     url = api_server_url+url;
 
